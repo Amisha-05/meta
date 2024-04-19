@@ -1,0 +1,8 @@
+{
+    "scripts": {
+        "start": "node your_start_script.js"
+    },
+    "dependencies": {
+        "@metamask/detect-provider": "^2.0.0"
+    }
+}

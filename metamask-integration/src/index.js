@@ -7,13 +7,13 @@ import { MetaMaskProvider } from "@metamask/sdk-react";
 ReactDOM.render(
     <React.StrictMode>
         <MetaMaskProvider
-            debug={true} 
+            debug={true} // Set debug to true for development
             sdkOptions={{
                 dappMetadata: {
                     name: "Your DApp Name",
                     url: window.location.href,
                 },
-              
+                // Add your Infura API key or other options here
             }}
         >
             <App />
