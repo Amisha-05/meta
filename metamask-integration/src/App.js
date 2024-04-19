@@ -1,11 +1,11 @@
 // src/App.js
 import React, { useState } from "react";
 import { useSDK } from "@metamask/sdk-react";
-import "./App.css"; // Import the CSS file
+import "./App.css"; 
 
 function App() {
     const [walletId, setWalletId] = useState("");
-    const { sdk, connected, disconnect } = useSDK(); // Add the disconnect function
+    const { sdk, connected, disconnect } = useSDK(); 
 
     const handleConnect = async () => {
         try {
@@ -18,19 +18,19 @@ function App() {
 
     const handleDisconnect = async () => {
         try {
-            await disconnect(); // Call the disconnect function
-            setWalletId(""); // Clear the wallet ID
+            await disconnect(); 
+            setWalletId(""); 
         } catch (err) {
             console.error("Failed to disconnect:", err);
         }
     };
 
     return (
-        <div className="dark-background"> {/* Apply dark background */}
+        <div className="dark-background"> 
             {!connected ? (
                 <button 
                     onClick={handleConnect} 
-                    className="button button-primary" // Apply the primary button style
+                    className="button button-primary"
                 >
                     Connect with Wallet
                 </button>
@@ -38,13 +38,13 @@ function App() {
                 <div>
                     <button 
                         disabled
-                        className="button button-disabled" // Apply the disabled button style
+                        className="button button-disabled" 
                     >
                         {walletId}
                     </button>
                     <button 
                         onClick={handleDisconnect}
-                        className="button button-secondary" // Apply the secondary button style for logout
+                        className="button button-secondary" 
                     >
                         Log Out
                     </button>
